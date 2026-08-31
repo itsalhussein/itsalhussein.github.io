@@ -6,8 +6,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Alhussein Anwar — Senior Flutter & Mobile Engineer",
-  description: "Senior mobile engineer shipping production Flutter, iOS, and Kotlin Multiplatform applications across enterprise, security, fintech, and consumer products.",
+  title: "Alhussein Anwar — Senior iOS Engineer",
+  description: "Senior iOS Engineer with 6+ years shipping native iOS products in Swift, UIKit, and SwiftUI, with experience evolving products to KMP/CMP and Flutter.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

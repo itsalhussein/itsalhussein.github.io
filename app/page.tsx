@@ -1,40 +1,25 @@
 const projects = [
   {
     marker: "DT",
-    markerClass: "coral",
+    markerClass: "cyan",
     title: "Digital Twin",
     eyebrow: "Secure identity & access",
-    status: "Private product",
+    status: "Native iOS → Flutter",
     description:
-      "A Flutter digital identity experience connecting people to physical spaces. I built NFC, BLE, and QR access flows, an encrypted on-device wallet, real-time push notifications, and a secure in-app mailbox.",
-    tags: ["Flutter", "NFC", "BLE / GATT", "QR", "Encrypted wallet"],
-    impact: "One app. Three access technologies. Security at every layer.",
-  },
-  {
-    marker: "P+",
-    markerClass: "violet",
-    title: "P+ · S+ · Diwan",
-    eyebrow: "Enterprise KMP / CMP suite",
-    status: "13+ enterprise clients",
-    description:
-      "A connected portfolio, strategy, and project-management suite for iOS and Android. At Master Team, I led its KMP/CMP transformation and architected shared business logic with Clean Architecture.",
-    tags: ["Kotlin Multiplatform", "Compose", "Clean Architecture", "LLM integration"],
-    impact: "Shared business logic across a three-product enterprise suite.",
-    links: [
-      { label: "View P+", href: "https://apps.apple.com/eg/app/p/id6752709705" },
-      { label: "View S+", href: "https://apps.apple.com/eg/app/s-3/id6753159927" },
-    ],
+      "I built the native iOS version in Swift, integrating external access hardware through CoreBluetooth alongside NFC and QR flows, an encrypted on-device wallet, real-time push notifications, and a secure mailbox. The product later moved to Flutter.",
+    tags: ["Swift", "CoreBluetooth", "NFC / QR", "Flutter", "Encrypted wallet"],
+    impact: "Native hardware integration and secure identity flows carried into a broader mobile product.",
   },
   {
     marker: "PN",
     markerClass: "green",
     title: "Prayer Now",
-    eyebrow: "Consumer app at scale",
-    status: "15M+ downloads",
+    eyebrow: "Consumer iOS at scale",
+    status: "Native iOS → cross-platform",
     description:
-      "A large-scale Islamic application serving millions of people. I contributed to reliable background notification delivery and analytics instrumentation for a high-volume consumer product.",
-    tags: ["iOS", "Background delivery", "Notifications", "Analytics"],
-    impact: "Production reliability for an audience of 15M+ downloads.",
+      "I contributed to native iOS background notification delivery and analytics instrumentation for a consumer Islamic product with 15M+ downloads. The product later evolved across platforms.",
+    tags: ["Native iOS", "Background delivery", "Notifications", "Analytics", "Cross-platform"],
+    impact: "Production reliability and product insight at a 15M+ download scale.",
     links: [
       {
         label: "View on App Store",
@@ -43,42 +28,81 @@ const projects = [
     ],
   },
   {
+    marker: "P+",
+    markerClass: "indigo",
+    title: "P+",
+    eyebrow: "Portfolio & project management",
+    status: "Native iOS → KMP/CMP",
+    description:
+      "I worked on P+ as a native iOS product before leading its KMP/CMP transformation. I helped shape shared business logic and a maintainable Clean Architecture foundation for portfolio, program, and project workflows.",
+    tags: ["iOS", "Kotlin Multiplatform", "Compose", "Clean Architecture", "Deep links"],
+    impact: "Native product knowledge preserved while the architecture expanded across platforms.",
+    links: [
+      { label: "View P+", href: "https://apps.apple.com/eg/app/p/id6752709705" },
+    ],
+  },
+  {
+    marker: "S+",
+    markerClass: "violet",
+    title: "S+",
+    eyebrow: "Enterprise strategy & OKRs",
+    status: "Native iOS → KMP/CMP",
+    description:
+      "I worked on S+ as a native iOS product before leading its KMP/CMP transformation. The work brought strategy and OKR workflows onto shared business logic structured with Clean Architecture.",
+    tags: ["iOS", "Kotlin Multiplatform", "Compose", "Clean Architecture", "LLM integration"],
+    impact: "An iOS-first strategy product evolved onto a shared cross-platform foundation.",
+    links: [
+      { label: "View S+", href: "https://apps.apple.com/eg/app/s-3/id6753159927" },
+    ],
+  },
+  {
+    marker: "D",
+    markerClass: "teal",
+    title: "Diwan",
+    eyebrow: "Enterprise collaboration",
+    status: "Native iOS → KMP/CMP",
+    description:
+      "I worked on Diwan as a native iOS product before leading its KMP/CMP transformation as part of the P+ / S+ / Diwan suite. The shared architecture supports collaboration across the connected enterprise products.",
+    tags: ["iOS", "Kotlin Multiplatform", "Compose", "Shared business logic", "Clean Architecture"],
+    impact: "A distinct native product evolved without losing its place in the wider suite.",
+  },
+  {
     marker: "M",
     markerClass: "blue",
     title: "Muyassar",
     eyebrow: "Hajj operations platform",
-    status: "Multi-role product",
+    status: "Native iOS → Flutter",
     description:
-      "A Flutter application for complex Hajj operations, bringing staff dashboards, medical profiles, accommodation tracking, and live mapping into one coordinated mobile experience.",
-    tags: ["Flutter", "Multi-role UX", "Live maps", "REST APIs"],
-    impact: "Operational complexity turned into clear, role-specific workflows.",
+      "I worked on Muyassar as a native iOS product first; it later moved to Flutter. The multi-role Hajj platform brings staff dashboards, medical profiles, accommodation tracking, and live mapping into one coordinated mobile experience.",
+    tags: ["iOS", "Flutter", "Multi-role UX", "Live maps", "REST APIs"],
+    impact: "Native product understanding carried into complex, role-specific cross-platform workflows.",
   },
   {
     marker: "PG",
     markerClass: "amber",
     title: "PDT Corporate · Guard",
     eyebrow: "Multi-tenant operations",
-    status: "Two production apps",
+    status: "Native iOS → Flutter",
     description:
-      "Flutter products for workforce and security operations. My work covered responsive UI, authentication, REST integrations, real-time alerts, background execution, access workflows, and device pairing.",
-    tags: ["Flutter", "Multi-tenant", "Real-time alerts", "Background sync"],
-    impact: "Connected people, sites, permissions, and time-sensitive operations.",
+      "I worked on the native iOS products first; PDT Corporate and PDT Guard later moved to Flutter. My contribution covered authentication, REST integrations, responsive UI, real-time alerts, background execution, access workflows, and device pairing.",
+    tags: ["iOS", "Flutter", "REST APIs", "Real-time alerts", "Background execution"],
+    impact: "Native operational knowledge carried into two production cross-platform products.",
   },
 ];
 
 const stack = [
-  { title: "Cross-platform", items: ["Flutter", "Dart", "Kotlin Multiplatform", "Compose Multiplatform"] },
-  { title: "Native mobile", items: ["Swift", "SwiftUI", "UIKit", "Kotlin", "Android SDK", "Jetpack Compose"] },
+  { title: "iOS engineering", items: ["Swift", "SwiftUI", "UIKit", "RxSwift", "CoreBluetooth", "HealthKit", "XCTest", "Instruments"] },
+  { title: "Cross-platform evolution", items: ["Kotlin Multiplatform", "Compose Multiplatform", "Flutter", "Dart", "Shared business logic", "Clean Architecture"] },
   { title: "Architecture", items: ["Clean Architecture", "MVVM", "VIPER", "BLoC", "Dependency injection"] },
   { title: "APIs & data", items: ["REST", "Firebase", "Supabase", "Realm", "SQLite", "Caching"] },
-  { title: "Device & OS", items: ["NFC", "BLE / GATT", "QR", "HealthKit", "Deep links", "Push notifications"] },
-  { title: "Quality & release", items: ["XCTest", "Kotlin Test", "Fastlane", "GitHub Actions", "Instruments", "Crashlytics"] },
+  { title: "Device & OS", items: ["CoreBluetooth", "NFC", "QR", "HealthKit", "Deep links", "Push notifications"] },
+  { title: "Quality & release", items: ["Fastlane", "GitHub Actions", "CI/CD", "Crashlytics", "Performance profiling", "App Store lifecycle"] },
 ];
 
 const experience = [
-  { company: "Master Team", role: "Senior Mobile Engineer", dates: "2024 — Present", note: "Leading shared KMP/CMP architecture across an enterprise product suite." },
+  { company: "Master Team", role: "Senior Mobile Engineer", dates: "2024 — Present", note: "Supporting the development and maintenance of iOS projects while leading shared KMP/CMP architecture across an enterprise product suite." },
   { company: "PDT Solutions", role: "iOS & Flutter Developer · Part-time", dates: "2024 — 2026", note: "Shipped secure identity, corporate operations, and security products." },
-  { company: "Expert Apps", role: "iOS Developer", dates: "2023 — 2024", note: "Built native iOS products, resilient API layers, and BLE device flows." },
+  { company: "Expert Apps", role: "iOS Developer", dates: "2023 — 2024", note: "Built Swift, UIKit, and RxSwift products; contributed to API delivery, CI/CD, crash debugging, and performance work." },
   { company: "Ultimate Solutions", role: "iOS Developer & UI/UX Designer", dates: "2020 — 2023", note: "Developed and maintained 10+ production iOS applications." },
 ];
 
@@ -112,14 +136,14 @@ export default function Home() {
       <main>
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy reveal">
-            <p className="kicker">Senior Flutter &amp; Mobile Engineer</p>
+            <p className="kicker">Senior iOS Engineer</p>
             <h1 id="hero-title">Alhussein<br />Anwar</h1>
             <span className="title-rule" aria-hidden="true" />
-            <h2>Cross-platform reach.<br />Native-level depth.</h2>
+            <h2>Native iOS depth.<br />Cross-platform architecture.</h2>
             <p className="hero-summary">
-              I build production mobile applications across fintech, enterprise, security,
-              fitness, and consumer products—from architecture and device integrations to
-              store release and the work that comes after launch.
+              I ship native iOS products in Swift, UIKit, and SwiftUI—from architecture and
+              device integrations through App Store release. When products evolve to KMP/CMP
+              or Flutter, I carry the validated native product knowledge into the new architecture.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
@@ -127,18 +151,18 @@ export default function Home() {
             </div>
             <div className="availability">
               <span className="pulse" aria-hidden="true" />
-              <strong>5+ years shipping mobile</strong>
-              <span>· Flutter, iOS &amp; KMP/CMP</span>
+              <strong>6+ years shipping iOS &amp; mobile</strong>
+              <span>· Swift · UIKit · SwiftUI</span>
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="Mobile engineering capability overview">
+          <div className="hero-visual" aria-label="Native iOS engineering and cross-platform architecture overview">
             <div className="orbit orbit-one" aria-hidden="true" />
             <div className="orbit orbit-two" aria-hidden="true" />
             <div className="code-card code-card-top">
-              <span className="code-label">SHARED CORE</span>
-              <span className="code-value">Clean Architecture</span>
-              <span className="code-meta">iOS · Android</span>
+              <span className="code-label">iOS FOUNDATION</span>
+              <span className="code-value">Swift · UIKit · SwiftUI</span>
+              <span className="code-meta">Architecture · APIs · release</span>
             </div>
             <div className="phone phone-back" aria-hidden="true">
               <div className="phone-screen screen-green">
@@ -149,16 +173,16 @@ export default function Home() {
             <div className="phone phone-front" aria-hidden="true">
               <div className="phone-screen">
                 <span className="phone-pill" />
-                <span className="screen-kicker">MOBILE SYSTEMS</span>
-                <strong>Built to ship.</strong>
+                <span className="screen-kicker">NATIVE iOS</span>
+                <strong>Built in Swift.</strong>
                 <div className="screen-chart"><i /><i /><i /><i /><i /></div>
                 <div className="screen-row"><span /> <span /></div>
               </div>
             </div>
             <div className="code-card code-card-bottom">
-              <span className="code-label">DEVICE LAYER</span>
-              <span className="code-value">NFC · BLE · QR</span>
-              <span className="code-meta">Secure physical access</span>
+              <span className="code-label">PLATFORM EVOLUTION</span>
+              <span className="code-value">KMP/CMP · Flutter</span>
+              <span className="code-meta">Native knowledge preserved</span>
             </div>
           </div>
         </section>
@@ -167,7 +191,7 @@ export default function Home() {
           <div><strong>15M+</strong><span>downloads on a product I supported</span></div>
           <div><strong>10+</strong><span>production iOS apps at Ultimate Solutions</span></div>
           <div><strong>13+</strong><span>enterprise clients across the P+ suite</span></div>
-          <div><strong>5+</strong><span>years shipping mobile products</span></div>
+          <div><strong>6+</strong><span>years shipping iOS and mobile products</span></div>
         </section>
 
         <section className="section" id="work" aria-labelledby="work-title">
@@ -227,9 +251,9 @@ export default function Home() {
           <div className="section-heading compact">
             <div>
               <p className="kicker">Stack</p>
-              <h2 id="stack-title">Built across the whole mobile system.</h2>
+              <h2 id="stack-title">iOS depth, with room to evolve.</h2>
             </div>
-            <p>Platform fluency matters. So does knowing where shared code should stop and native capability should begin.</p>
+            <p>Native iOS is the foundation. Cross-platform architecture is the next step when the product and team genuinely benefit from it.</p>
           </div>
           <div className="stack-grid">
             {stack.map((group, index) => (
@@ -247,14 +271,15 @@ export default function Home() {
         <section className="section about-section" id="about" aria-labelledby="about-title">
           <div className="about-copy">
             <p className="kicker">About</p>
-            <h2 id="about-title">An engineer who works from the product inward.</h2>
-            <p>I’m a senior mobile engineer based in Giza, Egypt. My work spans Flutter, native iOS, and Kotlin/Compose Multiplatform, but the technology is never the headline—the product risk is.</p>
+            <h2 id="about-title">Native product knowledge that survives the migration.</h2>
+            <p>I’m a Senior iOS Engineer based in Giza, Egypt. For 6+ years I’ve built and maintained native Apple-platform products in Swift, UIKit, and SwiftUI, from interface details and device APIs to release and production support.</p>
+            <p>That native product knowledge has also enabled responsible transformations to Kotlin/Compose Multiplatform and Flutter. I understand the behavior, platform constraints, and product decisions before deciding what should be shared.</p>
             <p>I’ve worked on secure physical-access flows, enterprise portfolio systems, workforce operations, fitness products, and consumer apps at significant scale. That range has made me comfortable moving between interface details, device APIs, shared architecture, production debugging, and store compliance.</p>
             <p><strong>I care about systems that remain understandable after launch.</strong> Clear boundaries, resilient data flows, useful instrumentation, and interfaces that feel native to the platform.</p>
             <div className="about-facts">
               <div><span>Based</span><strong>Giza, Egypt</strong></div>
               <div><span>Languages</span><strong>Arabic · English</strong></div>
-              <div><span>Focus</span><strong>Flutter · iOS · KMP</strong></div>
+              <div><span>Focus</span><strong>Swift · UIKit · SwiftUI</strong></div>
               <div><span>Delivery</span><strong>App Store · Play Store</strong></div>
             </div>
           </div>
@@ -286,7 +311,7 @@ export default function Home() {
 
       <footer>
         <a className="brand" href="#top"><span className="brand-dot" aria-hidden="true" />Alhussein Anwar</a>
-        <p>© 2026 · Senior Flutter &amp; Mobile Engineer</p>
+        <p>© 2026 · Senior iOS Engineer</p>
       </footer>
     </div>
   );
