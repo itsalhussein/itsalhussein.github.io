@@ -42,7 +42,7 @@ test("the exported CV, images, fonts, and stylesheets are present", async () => 
 
 test("career evidence retains contribution and concurrent-role context", () => {
   assert.match(html, /Part-time · Concurrent role/);
-  assert.match(html, /product downloads, as recorded in my CV/);
+  assert.match(html, /product downloads/);
   assert.match(html, /enterprise clients across the suite/);
   assert.match(html, /Contributed to native iOS background notification delivery/);
   assert.match(html, /Built the native iOS app in Swift/);

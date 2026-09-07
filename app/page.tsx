@@ -54,6 +54,7 @@ export default function Home() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy"><p className="eyebrow">ALHUSSEIN ANWAR / PRODUCT ENGINEER</p><h1 id="hero-title">Native iOS depth.<br /><span>Cross-platform delivery.</span></h1>
             <p className="hero-summary">I build and ship mobile products with Swift, Flutter, and Kotlin Multiplatform—from interfaces and device integrations to architecture and store release.</p>
+            <a className="hero-proof" href="#prayer-now"><strong>15M+ downloads</strong><span>Prayer Now · Native iOS contributor</span><Arrow direction="right" /></a>
             <div className="hero-actions"><a className="button primary" href="#work">View selected work <Arrow direction="down" /></a><a className="button secondary" href={cv} download>Download CV <span className="file-label">PDF</span></a></div>
             <p className="location">Giza, Egypt <span aria-hidden="true">·</span> Arabic & English</p>
           </div>
@@ -65,13 +66,29 @@ export default function Home() {
         <section id="work" className="section work-section" aria-labelledby="work-title">
           <div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Products I’ve helped build.</h2></div><p>What I worked on,<br />and what I delivered.</p></div>
           <div className="featured-projects">
-            <article className="project project-featured" id="digital-twin"><div className="project-main">
-              <div className="project-meta"><span>SECURITY & IDENTITY</span><span>01</span></div><h3>Digital Twin</h3><p className="project-subtitle">Connecting mobile identity to physical access.</p>
-              <p className="contribution-label">MY CONTRIBUTION</p><p className="project-description">Built the native iOS app in Swift and integrated external access hardware through CoreBluetooth, alongside NFC and QR access flows.</p>
-              <ul className="project-points"><li>Encrypted on-device digital wallet</li><li>Real-time notifications and a secure in-app mailbox</li></ul><div className="technology-line">Swift <span>·</span> CoreBluetooth <span>·</span> NFC / QR</div>
-            </div>
-            <div className="access-visual" aria-label="Digital Twin integration scope"><p className="visual-label">INTEGRATION SCOPE</p><div className="scope-core"><span className="scope-monogram" aria-hidden="true">DT</span><strong>Native iOS app</strong><span>Swift · CoreBluetooth</span></div><div className="scope-path" aria-hidden="true" /><div className="scope-branches"><div><strong>BLE</strong><span>Access hardware</span></div><div><strong>NFC / QR</strong><span>Access flows</span></div></div><div className="scope-wallet">Encrypted wallet · Secure mailbox</div><p className="visual-caption">Engineering scope diagram</p></div>
-            <ProjectDetails title="Digital Twin"><div><h4>The product</h4><p>A secure identity and physical-access experience that connects a mobile app with external hardware.</p></div><div><h4>What I owned</h4><p>The native Swift implementation and hardware integrations, plus the wallet, access, notification, and mailbox features described above.</p></div><div><h4>What this demonstrates</h4><p>Native iOS delivery across device APIs, local storage, background notifications, and user-facing access flows.</p></div></ProjectDetails></article>
+            <article className="project project-featured project-spotlight" id="prayer-now">
+              <div className="project-main">
+                <div className="project-meta"><span>FEATURED / CONSUMER iOS AT SCALE</span><span>01</span></div>
+                <h3>Prayer Now</h3>
+                <p className="project-subtitle">My largest app contribution by downloads.</p>
+                <div className="project-evidence spotlight-evidence"><strong>15M+</strong><span>product downloads<small>Scale documented in my CV</small></span></div>
+                <p className="contribution-label">MY CONTRIBUTION</p>
+                <p className="project-description">Contributed to native iOS background notification delivery and analytics instrumentation for a consumer Islamic app used at significant scale.</p>
+                <div className="technology-line">Native iOS <span>·</span> Notifications <span>·</span> Analytics</div>
+                <div className="project-links"><ExternalLink className="button primary" href="https://apps.apple.com/eg/app/prayer-now-azan-prayer-times/id1081440836">View Prayer Now on App Store</ExternalLink></div>
+              </div>
+              <figure className="spotlight-visual">
+                <a href="/images/prayer-now-screen.png" target="_blank" rel="noopener noreferrer"><img src="/images/prayer-now-screen.png" width="1170" height="2080" loading="lazy" alt="Official Prayer Now promotional screenshot showing its Arabic prayer-times home screen. Open full-size image." /></a>
+                <figcaption>Prayer Now home screen.<a href="https://apps.apple.com/eg/app/prayer-now-azan-prayer-times/id1081440836" target="_blank" rel="noopener noreferrer">Official App Store artwork · Approcks ↗</a></figcaption>
+              </figure>
+              <ProjectDetails title="Prayer Now">
+                <div><h4>The product</h4><p>A consumer Islamic app with prayer times, reminders, and daily religious content.</p></div>
+                <div><h4>My engineering work</h4><p>Contributed to background notification delivery and analytics instrumentation in the native iOS product.</p></div>
+                <div><h4>Scale and ownership</h4><p>Prayer Now is the largest app I’ve contributed to by downloads. The 15M+ figure describes the product’s reach; my work focused on notifications and analytics within the wider team.</p></div>
+              </ProjectDetails>
+            </article>
+
+
             <article className="project" id="p-plus">
               <div className="project-main">
                 <div className="project-meta"><span>PORTFOLIO & PROJECT MANAGEMENT</span><span>02</span></div>
@@ -120,10 +137,13 @@ export default function Home() {
                 <div><h4>What this demonstrates</h4><p>Evolving an individual collaboration product while accounting for its place in a connected enterprise ecosystem.</p></div>
               </ProjectDetails>
             </article>
-            <article className="project" id="prayer-now"><div className="project-main"><div className="project-meta"><span>CONSUMER & RELIABILITY</span><span>05</span></div><h3>Prayer Now</h3><p className="project-subtitle">Background delivery for an everyday companion.</p>
-              <p className="contribution-label">MY CONTRIBUTION</p><p className="project-description">Contributed to native iOS background notification delivery and analytics instrumentation for a widely used Islamic app.</p><div className="project-evidence"><strong>15M+</strong><span>product downloads, as recorded in my CV</span></div>
-              <div className="technology-line">Native iOS <span>·</span> Notifications <span>·</span> Analytics</div><div className="project-links"><ExternalLink href="https://apps.apple.com/eg/app/prayer-now-azan-prayer-times/id1081440836">View on App Store</ExternalLink></div>
-            </div><ProjectDetails title="Prayer Now"><div><h4>The product</h4><p>A consumer Islamic app with prayer times, reminders, and daily religious content.</p></div><div><h4>My engineering work</h4><p>Contributed to background notification delivery and analytics instrumentation in the native iOS product.</p></div><div><h4>Scale and ownership</h4><p>The download figure describes the product I contributed to. My contribution focused on notifications and analytics, within a wider team.</p></div><figure className="product-screenshot"><a href="/images/prayer-now-screen.png" target="_blank" rel="noopener noreferrer"><img src="/images/prayer-now-screen.png" width="1170" height="2080" loading="lazy" alt="Official Prayer Now promotional screenshot showing its Arabic prayer-times home screen. Open full-size image." /></a><figcaption>Prayer Now home screen. <a href="https://apps.apple.com/eg/app/prayer-now-azan-prayer-times/id1081440836" target="_blank" rel="noopener noreferrer">Official App Store artwork · Approcks ↗</a></figcaption></figure></ProjectDetails></article>
+
+            <article className="project" id="digital-twin"><div className="project-main">
+              <div className="project-meta"><span>SECURITY & IDENTITY</span><span>05</span></div><h3>Digital Twin</h3><p className="project-subtitle">Connecting mobile identity to physical access.</p>
+              <p className="contribution-label">MY CONTRIBUTION</p><p className="project-description">Built the native iOS app in Swift and integrated external access hardware through CoreBluetooth, alongside NFC and QR access flows.</p>
+              <ul className="project-points"><li>Encrypted on-device digital wallet</li><li>Real-time notifications and a secure in-app mailbox</li></ul><div className="technology-line">Swift <span>·</span> CoreBluetooth <span>·</span> NFC / QR</div>
+            </div>
+            <ProjectDetails title="Digital Twin"><div><h4>The product</h4><p>A secure identity and physical-access experience that connects a mobile app with external hardware.</p></div><div><h4>What I owned</h4><p>The native Swift implementation and hardware integrations, plus the wallet, access, notification, and mailbox features described above.</p></div><div><h4>What this demonstrates</h4><p>Native iOS delivery across device APIs, local storage, background notifications, and user-facing access flows.</p></div><div className="access-visual" aria-label="Digital Twin integration scope"><p className="visual-label">INTEGRATION SCOPE</p><div className="scope-core"><span className="scope-monogram" aria-hidden="true">DT</span><strong>Native iOS app</strong><span>Swift · CoreBluetooth</span></div><div className="scope-path" aria-hidden="true" /><div className="scope-branches"><div><strong>BLE</strong><span>Access hardware</span></div><div><strong>NFC / QR</strong><span>Access flows</span></div></div><div className="scope-wallet">Encrypted wallet · Secure mailbox</div><p className="visual-caption">Engineering scope diagram</p></div></ProjectDetails></article>
           </div>
           <details className="additional-work"><summary><span><span className="eyebrow">MORE PRODUCTION WORK</span><strong>Flutter operations, fitness, finance & enterprise apps</strong></span><span className="detail-toggle" aria-hidden="true">+</span></summary><div className="additional-content"><div className="other-projects"><article><h3>PDT Corporate & PDT Guard</h3><p>Flutter UI, authentication, REST integrations, real-time alerts, and background execution for workforce and security operations. Features included access workflows and device pairing.</p></article><article><h3>Muyassar</h3><p>A multi-role Flutter Hajj-management platform with staff dashboards, medical profiles, accommodation tracking, and live mapping.</p></article></div><p className="published-intro">Other published products I worked on</p><div className="published-grid">{publishedWork.map(item => <ExternalLink key={item.label} href={item.href}>{item.label}</ExternalLink>)}</div></div></details>
         </section>
