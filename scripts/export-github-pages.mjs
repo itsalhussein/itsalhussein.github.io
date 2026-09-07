@@ -30,7 +30,12 @@ if (!response.ok) {
 }
 
 const html = (await response.text())
-  .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+  // Retain only the standalone theme control; the export needs no React runtime.
+  .replace(/<script\b([^>]*)>[\s\S]*?<\/script>/gi, (script, attributes) =>
+    /\bid="portfolio-theme"/.test(attributes) && /\bsrc="\/theme\.js"/.test(attributes)
+      ? script
+      : "",
+  )
   .replace(/<link\b(?=[^>]*\brel=["']modulepreload["'])[^>]*>/gi, "");
 
 await rm(output, { recursive: true, force: true });
