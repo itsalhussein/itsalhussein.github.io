@@ -10,12 +10,12 @@ Requires Node.js 22.13 or newer. Install the existing locked dependencies with `
 
 Run `npm run export:github-pages` to build and export the site into `docs/`. The repository's GitHub Pages setup serves this directory. Commit the generated output together with source changes before publishing.
 
-The export has no client-side JavaScript dependency. Navigation, CV downloads, product images, and expandable project details use native HTML and remain functional on GitHub Pages.
+Navigation, CV downloads, product images, and expandable project details use native HTML and remain functional on GitHub Pages. A small standalone theme script follows the device color scheme until the visitor chooses a mode, then remembers that choice. The export omits the React runtime and retains only this theme script. With JavaScript disabled, the site follows the device color scheme through CSS.
 
 ## Validation
 
 - `npm run lint`
-- `npm test` — builds, exports, and checks navigation destinations, local assets, the PDF, native disclosure markup, and important contribution context.
+- `npm test` — builds, exports, and checks navigation destinations, local assets, the PDF, native disclosure markup, important contribution context, and theme persistence and fallback behavior.
 
 ## Content maintenance
 

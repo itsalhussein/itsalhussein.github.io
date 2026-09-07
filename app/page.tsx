@@ -49,6 +49,11 @@ export default function Home() {
       <header className="site-header"><div className="header-inner container">
         <a className="brand" href="#top" aria-label="Alhussein Anwar, home"><span className="monogram" aria-hidden="true">aa<span>.</span></span><span>Alhussein Anwar</span></a>
         <nav aria-label="Primary navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a><a className="nav-cv" href={cv} download><span><span className="nav-cv-prefix">Download </span>CV</span><Arrow direction="down" /></a></nav>
+        <button className="theme-toggle" type="button" data-theme-toggle aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" suppressHydrationWarning>
+          <svg className="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z" /></svg>
+          <svg className="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+          <span className="theme-label">Theme</span>
+        </button>
       </div></header>
       <main id="main" className="container">
         <section className="hero" aria-labelledby="hero-title">

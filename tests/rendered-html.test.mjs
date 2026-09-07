@@ -6,10 +6,16 @@ import test from "node:test";
 const output = resolve("docs");
 const html = await readFile(resolve(output, "index.html"), "utf8");
 
-test("exports a complete, script-independent recruiter portfolio", () => {
+test("exports a complete portfolio with only the standalone theme script", () => {
   assert.equal([...html.matchAll(/<h1\b/g)].length, 1);
   assert.match(html, /<title>Alhussein Anwar/);
-  assert.doesNotMatch(html, /<script\b|codex-preview|Your site is taking shape/i);
+  assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
+  const scripts = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)];
+  assert.equal(scripts.length, 1, "Only the theme script belongs in the static export");
+  assert.match(scripts[0][1], /\bid="portfolio-theme"/);
+  assert.match(scripts[0][1], /\bsrc="\/theme\.js"/);
+  assert.equal(scripts[0][2], "");
+  assert.match(html, /<button[^>]*data-theme-toggle/);
   assert.equal([...html.matchAll(/<details\b/g)].length, 6);
   assert.equal([...html.matchAll(/<summary\b/g)].length, 6);
   for (const section of ["work", "experience", "stack", "about", "contact"]) {

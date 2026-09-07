@@ -13,7 +13,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* A tiny blocking script applies the saved theme before first paint. */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script id="portfolio-theme" src="/theme.js" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </html>
   );
