@@ -10,8 +10,8 @@ test("exports a complete, script-independent recruiter portfolio", () => {
   assert.equal([...html.matchAll(/<h1\b/g)].length, 1);
   assert.match(html, /<title>Alhussein Anwar/);
   assert.doesNotMatch(html, /<script\b|codex-preview|Your site is taking shape/i);
-  assert.equal([...html.matchAll(/<details\b/g)].length, 4);
-  assert.equal([...html.matchAll(/<summary\b/g)].length, 4);
+  assert.equal([...html.matchAll(/<details\b/g)].length, 6);
+  assert.equal([...html.matchAll(/<summary\b/g)].length, 6);
   for (const section of ["work", "experience", "stack", "about", "contact"]) {
     assert.match(html, new RegExp(`id="${section}"`));
   }

@@ -5,7 +5,7 @@ const cv = "/Alhussein-Anwar-CV.pdf";
 const linkedin = "https://linkedin.com/in/itsalhussein";
 const experience = [
   { company: "Master Team", role: "Senior Mobile Engineer", dates: "Jan 2024 — Present", current: true,
-    points: ["Led the Kotlin / Compose Multiplatform transformation of P+, S+, and Diwan, an enterprise suite used across 13+ clients.", "Architected shared business logic and integrated AI-powered task suggestions, analytics summaries, and deep linking."],
+    points: ["Led the Kotlin / Compose Multiplatform transformation of three separate products—P+, S+, and Diwan—serving 13+ enterprise clients across the suite.", "Architected shared business logic and integrated AI-powered task suggestions, analytics summaries, and deep linking."],
     stack: "Swift · Kotlin Multiplatform · Compose · Clean Architecture" },
   { company: "PDT Solutions", role: "iOS & Flutter Developer", dates: "Feb 2024 — Feb 2026", partTime: true,
     points: ["Built Digital Twin’s native iOS app and integrated physical-access hardware through Swift and CoreBluetooth.", "Shipped three Flutter products alongside native iOS work, with authentication, REST APIs, real-time alerts, and background execution."],
@@ -63,7 +63,7 @@ export default function Home() {
           </aside>
         </section>
         <section id="work" className="section work-section" aria-labelledby="work-title">
-          <div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Three projects. Different challenges.</h2></div><p>What I worked on,<br />and what I delivered.</p></div>
+          <div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Products I’ve helped build.</h2></div><p>What I worked on,<br />and what I delivered.</p></div>
           <div className="featured-projects">
             <article className="project project-featured" id="digital-twin"><div className="project-main">
               <div className="project-meta"><span>SECURITY & IDENTITY</span><span>01</span></div><h3>Digital Twin</h3><p className="project-subtitle">Connecting mobile identity to physical access.</p>
@@ -72,11 +72,55 @@ export default function Home() {
             </div>
             <div className="access-visual" aria-label="Digital Twin integration scope"><p className="visual-label">INTEGRATION SCOPE</p><div className="scope-core"><span className="scope-monogram" aria-hidden="true">DT</span><strong>Native iOS app</strong><span>Swift · CoreBluetooth</span></div><div className="scope-path" aria-hidden="true" /><div className="scope-branches"><div><strong>BLE</strong><span>Access hardware</span></div><div><strong>NFC / QR</strong><span>Access flows</span></div></div><div className="scope-wallet">Encrypted wallet · Secure mailbox</div><p className="visual-caption">Engineering scope diagram</p></div>
             <ProjectDetails title="Digital Twin"><div><h4>The product</h4><p>A secure identity and physical-access experience that connects a mobile app with external hardware.</p></div><div><h4>What I owned</h4><p>The native Swift implementation and hardware integrations, plus the wallet, access, notification, and mailbox features described above.</p></div><div><h4>What this demonstrates</h4><p>Native iOS delivery across device APIs, local storage, background notifications, and user-facing access flows.</p></div></ProjectDetails></article>
-            <article className="project" id="enterprise-suite"><div className="project-main"><div className="project-meta"><span>ENTERPRISE & ARCHITECTURE</span><span>02</span></div><h3>P+ / S+ / Diwan</h3><p className="project-subtitle">A shared foundation for three enterprise products.</p>
-              <p className="contribution-label">MY CONTRIBUTION</p><p className="project-description">Led the Kotlin / Compose Multiplatform transformation and architected shared business logic with Clean Architecture.</p><div className="project-evidence"><strong>13+</strong><span>enterprise clients across the suite</span></div>
-              <div className="technology-line">KMP / CMP <span>·</span> Clean Architecture <span>·</span> iOS</div><div className="project-links"><ExternalLink href="https://apps.apple.com/eg/app/p/id6752709705">View P+</ExternalLink><ExternalLink href="https://apps.apple.com/eg/app/s-3/id6753159927">View S+</ExternalLink></div>
-            </div><ProjectDetails title="P+, S+, and Diwan"><div><h4>The products</h4><p>P+ supports portfolio and project management. S+ covers strategy and OKRs. Diwan supports enterprise collaboration.</p></div><div><h4>My engineering work</h4><p>Led the suite’s cross-platform transformation, established shared business logic, and integrated LLM-powered task suggestions and analytics summaries. Implemented Universal Links, custom URL schemes, deferred deep links, and AppsFlyer.</p></div><div><h4>Delivery</h4><p>Supported testing, performance profiling, crash monitoring, and store compliance across iOS and Android. The client count describes the suite’s reach.</p></div><figure className="product-screenshot"><a href="/images/pplus-screen.png" target="_blank" rel="noopener noreferrer"><img src="/images/pplus-screen.png" width="1170" height="2532" loading="lazy" alt="Official P+ screenshot showing a portfolio, program progress, and budget information. Open full-size image." /></a><figcaption>P+ portfolio and program view. <a href="https://apps.apple.com/eg/app/p/id6752709705" target="_blank" rel="noopener noreferrer">Official App Store screenshot · Master Team ↗</a></figcaption></figure></ProjectDetails></article>
-            <article className="project" id="prayer-now"><div className="project-main"><div className="project-meta"><span>CONSUMER & RELIABILITY</span><span>03</span></div><h3>Prayer Now</h3><p className="project-subtitle">Background delivery for an everyday companion.</p>
+            <article className="project" id="p-plus">
+              <div className="project-main">
+                <div className="project-meta"><span>PORTFOLIO & PROJECT MANAGEMENT</span><span>02</span></div>
+                <h3>P+</h3>
+                <p className="project-subtitle">Managing portfolios, programs, and projects.</p>
+                <p className="contribution-label">MY CONTRIBUTION</p>
+                <p className="project-description">Worked on the native iOS product before leading its Kotlin / Compose Multiplatform transformation. Shaped shared business logic for portfolio, program, and project workflows.</p>
+                <div className="technology-line">Native iOS <span>·</span> KMP / CMP <span>·</span> Clean Architecture</div>
+                <div className="project-links"><ExternalLink href="https://apps.apple.com/eg/app/p/id6752709705">View P+ on App Store</ExternalLink></div>
+              </div>
+              <ProjectDetails title="P+">
+                <div><h4>The product</h4><p>An enterprise portfolio and project-management product that brings portfolios, programs, and projects into a connected mobile experience.</p></div>
+                <div><h4>My engineering work</h4><p>Contributed to the native iOS product, then led its KMP/CMP transformation. Helped establish shared business logic and a maintainable Clean Architecture foundation for its management workflows.</p></div>
+                <div><h4>What this demonstrates</h4><p>Experience evolving a substantial native product into a cross-platform architecture while retaining knowledge of its existing workflows.</p></div>
+                <figure className="product-screenshot"><a href="/images/pplus-screen.png" target="_blank" rel="noopener noreferrer"><img src="/images/pplus-screen.png" width="1170" height="2532" loading="lazy" alt="Official P+ screenshot showing a portfolio, program progress, and budget information. Open full-size image." /></a><figcaption>P+ portfolio and program view. <a href="https://apps.apple.com/eg/app/p/id6752709705" target="_blank" rel="noopener noreferrer">Official App Store screenshot · Master Team ↗</a></figcaption></figure>
+              </ProjectDetails>
+            </article>
+            <article className="project" id="s-plus">
+              <div className="project-main">
+                <div className="project-meta"><span>STRATEGY & OKRS</span><span>03</span></div>
+                <h3>S+</h3>
+                <p className="project-subtitle">Connecting enterprise strategy with objectives.</p>
+                <p className="contribution-label">MY CONTRIBUTION</p>
+                <p className="project-description">Evolved S+ from native iOS to a shared Kotlin / Compose foundation, leading the transformation of its strategy and OKR workflows with Clean Architecture.</p>
+                <div className="technology-line">Native iOS <span>·</span> KMP / CMP <span>·</span> Shared business logic</div>
+                <div className="project-links"><ExternalLink href="https://apps.apple.com/eg/app/s-3/id6753159927">View S+ on App Store</ExternalLink></div>
+              </div>
+              <ProjectDetails title="S+">
+                <div><h4>The product</h4><p>An enterprise strategy-management product focused on objectives and key results (OKRs).</p></div>
+                <div><h4>My engineering work</h4><p>Worked on S+ as a native iOS product before leading its KMP/CMP transformation. Brought strategy and OKR workflows onto shared business logic structured with Clean Architecture.</p></div>
+                <div><h4>What this demonstrates</h4><p>Applying cross-platform architecture to a strategy product with its own workflows and product requirements.</p></div>
+              </ProjectDetails>
+            </article>
+            <article className="project" id="diwan">
+              <div className="project-main">
+                <div className="project-meta"><span>ENTERPRISE COLLABORATION</span><span>04</span></div>
+                <h3>Diwan</h3>
+                <p className="project-subtitle">Supporting collaboration across the enterprise.</p>
+                <p className="contribution-label">MY CONTRIBUTION</p>
+                <p className="project-description">Led Diwan’s KMP/CMP transformation, carrying native iOS product knowledge into shared business logic for enterprise collaboration.</p>
+                <div className="technology-line">Native iOS <span>·</span> KMP / CMP <span>·</span> Clean Architecture</div>
+              </div>
+              <ProjectDetails title="Diwan">
+                <div><h4>The product</h4><p>A distinct enterprise collaboration product within the wider Master Team product suite.</p></div>
+                <div><h4>My engineering work</h4><p>Worked on the native iOS product before leading its move to Kotlin / Compose Multiplatform. The shared architecture supports collaboration across connected enterprise products.</p></div>
+                <div><h4>What this demonstrates</h4><p>Evolving an individual collaboration product while accounting for its place in a connected enterprise ecosystem.</p></div>
+              </ProjectDetails>
+            </article>
+            <article className="project" id="prayer-now"><div className="project-main"><div className="project-meta"><span>CONSUMER & RELIABILITY</span><span>05</span></div><h3>Prayer Now</h3><p className="project-subtitle">Background delivery for an everyday companion.</p>
               <p className="contribution-label">MY CONTRIBUTION</p><p className="project-description">Contributed to native iOS background notification delivery and analytics instrumentation for a widely used Islamic app.</p><div className="project-evidence"><strong>15M+</strong><span>product downloads, as recorded in my CV</span></div>
               <div className="technology-line">Native iOS <span>·</span> Notifications <span>·</span> Analytics</div><div className="project-links"><ExternalLink href="https://apps.apple.com/eg/app/prayer-now-azan-prayer-times/id1081440836">View on App Store</ExternalLink></div>
             </div><ProjectDetails title="Prayer Now"><div><h4>The product</h4><p>A consumer Islamic app with prayer times, reminders, and daily religious content.</p></div><div><h4>My engineering work</h4><p>Contributed to background notification delivery and analytics instrumentation in the native iOS product.</p></div><div><h4>Scale and ownership</h4><p>The download figure describes the product I contributed to. My contribution focused on notifications and analytics, within a wider team.</p></div><figure className="product-screenshot"><a href="/images/prayer-now-screen.png" target="_blank" rel="noopener noreferrer"><img src="/images/prayer-now-screen.png" width="1170" height="2080" loading="lazy" alt="Official Prayer Now promotional screenshot showing its Arabic prayer-times home screen. Open full-size image." /></a><figcaption>Prayer Now home screen. <a href="https://apps.apple.com/eg/app/prayer-now-azan-prayer-times/id1081440836" target="_blank" rel="noopener noreferrer">Official App Store artwork · Approcks ↗</a></figcaption></figure></ProjectDetails></article>
